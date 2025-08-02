@@ -1,26 +1,169 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Reset.css */
+* {
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  font-size: 16px; /* برای کنترل بهتر واحدهای rem */
+  scroll-behavior: smooth; /* اسکرول نرم */
+}
+
+/* font family */
+@font-face {
+  font-family: "Estedad-Medium";
+  src: url("/fonts/Estedad-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  /* رنگ‌ها برای حالت روشن */
+  --Shade-7: #08100b;
+  --Shade-6: #102016;
+  --Shade-5: #183020;
+  --Shade-4: #21402b;
+  --Shade-3: #294f36;
+  --Shade-2: #315f41;
+  --Shade-1: #396f4b;
+  --Primary: #417f56;
+  --Tint-7: #4e9968;
+  --Tint-6: #61ae7b;
+  --Tint-5: #7cbc91;
+  --Tint-4: #96c9a7;
+  --Tint-3: #b0d7bd;
+  --Tint-2: #cae4d3;
+  --Tint-1: #e5f2e9;
+
+  --Black: #0c0c0c;
+  --Gray-9: #353535;
+  --Gray-8: #717171;
+  --Gray-7: #757575;
+  --Gray-6: #adadad;
+  --Gray-5: #cbcbcb;
+  --Gray-4: #ededed;
+  --Gray-3: #e1e1e1;
+  --Gray-2: #f9f9f9;
+  --Gray-1: #ffffff;
+
+  --warning-light: #a9791c;
+  --warning: #f4b740;
+  --warning-extralight: #fff8e1;
+
+  --success-extralight: #00966d;
+  --success-light: #00ba88;
+  --success: #f3fdfa;
+
+  --Error-extralight: #fff2f2;
+  --Error-light: #ed2e2e;
+  --Error: #c30000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* رنگ‌ها برای حالت تاریک */
+    --Shade-7: #396f4b;
+    --Shade-6: #315f41;
+    --Shade-5: #294f36;
+    --Shade-4: #21402b;
+    --Shade-3: #183020;
+    --Shade-2: #102016;
+    --Shade-1: #08100b;
+    --Primary: #417f56;
+    --Tint-7: #e5f2e9;
+    --Tint-6: #cae4d3;
+    --Tint-5: #b0d7bd;
+    --Tint-4: #96c9a7;
+    --Tint-3: #7cbc91;
+    --Tint-2: #61ae7b;
+    --Tint-1: #4e9968;
+
+    --Black: #ffffff;
+    --Gray-9: #717171;
+    --Gray-8: #f9f9f9;
+    --Gray-7: #ededed;
+    --Gray-6: #cbcbcb;
+    --Gray-5: #adadad;
+    --Gray-4: #757575;
+    --Gray-3: #353535;
+    --Gray-2: #0c0c0c;
+    --Gray-1: #353535;
+
+    --warning-light: #fff8e1;
+    --warning: #f4b740;
+    --warning-extralight: #a9791c;
+
+    --success-extralight: #00ba88;
+    --success-light: #00966d;
+    --success: #f3fdfa;
+
+    --Error-extralight: #fff2f2;
+    --Error-light: #ed2e2e;
+    --Error: #c30000;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--Gray-1);
+  color: var(--Gray-9);
+  font-family: "Estedad-Medium", "Inter", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color var(--transition-speed);
+}
+input {
+  font-family: inherit;
+  transition: background-color var(--transition-speed);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+/* .hidden {
+  display: none !important;
+} */
+
+/* rtl */
+.rtl {
+  direction: rtl;
+}
+
+/* alert */
+.alert-warning {
+  background-color: var(--warning);
+}
+
+.alert-success {
+  background-color: var(--success-extralight);
+}
+
+/* --------------------------------- */
+.custom-pagination-slider .swiper-pagination-bullet {
+  background-color: var(--Gray-8);
+}
+
+.custom-pagination-slider .swiper-pagination-bullet-active {
+  background-color: var(--Primary);
 }
