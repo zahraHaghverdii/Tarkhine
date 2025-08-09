@@ -1,5 +1,6 @@
 "use client";
 
+import CartBranch from "@/components/CartBranch";
 import Container from "@/components/Container";
 import Modal from "@/components/Modal";
 import Title from "@/components/Title";
@@ -64,78 +65,31 @@ export default function RestaurantMenu() {
                     "برای دیدن منوی رستوران، لطفا شعبه مدنظر خود را انتخاب کنید:"
                   }
                 >
-                  <div className="flex justify-between items-start gap-5">
-                    <div className="border border-[var(--Gray-5)] rounded-lg ">
-                      <div className="w-full h-[150px] relative">
-                        <Image
-                          src={"/images/branch/breanch-ecbatan.png"}
-                          alt="kkk"
-                          fill
-                        />
-                      </div>
-                      <div className="text-center p-5">
-                        <h4 className="text-[var(--Gray-9)] text-xl">
-                          شعبه اکباتان
-                        </h4>
-                        <span className="text-[var(--Gray-8)] text-sm">
-                          شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="border border-[var(--Gray-5)] rounded-lg ">
-                      <div className="w-full h-[150px] relative">
-                        <Image
-                          src={"/images/branch/breanch-ecbatan.png"}
-                          alt="kkk"
-                          fill
-                        />
-                      </div>
-                      <div className="text-center p-5">
-                        <h4 className="text-[var(--Gray-9)] text-xl">
-                          شعبه اکباتان
-                        </h4>
-                        <span className="text-[var(--Gray-8)] text-sm">
-                          شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="border border-[var(--Gray-5)] rounded-lg ">
-                      <div className="w-full h-[150px] relative">
-                        <Image
-                          src={"/images/branch/breanch-ecbatan.png"}
-                          alt="kkk"
-                          fill
-                        />
-                      </div>
-                      <div className="text-center p-5">
-                        <h4 className="text-[var(--Gray-9)] text-xl">
-                          شعبه اکباتان
-                        </h4>
-                        <span className="text-[var(--Gray-8)] text-sm">
-                          شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="border border-[var(--Gray-5)] rounded-lg ">
-                      <div className="w-full h-[150px] relative">
-                        <Image
-                          src={"/images/branch/breanch-ecbatan.png"}
-                          alt="kkk"
-                          fill
-                        />
-                      </div>
-                      <div className="text-center p-5">
-                        <h4 className="text-[var(--Gray-9)] text-xl">
-                          شعبه اکباتان
-                        </h4>
-                        <span className="text-[var(--Gray-8)] text-sm">
-                          شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم
-                        </span>
-                      </div>
-                    </div>
+                  <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-5 md:gap-3 gap-4">
+                    <CartBranch
+                      titleBranch={"شعبه ونک"}
+                      addres={
+                        "  شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم"
+                      }
+                      linkBranch="/branch"
+                      linkImg={"/images/branch/breanch-ecbatan.png"}
+                    />
+                    <CartBranch
+                      titleBranch={"شعبه ونک"}
+                      addres={
+                        "  شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم"
+                      }
+                      linkBranch="/branch"
+                      linkImg={"/images/branch/breanch-ecbatan.png"}
+                    />
+                    <CartBranch
+                      titleBranch={"شعبه ونک"}
+                      addres={
+                        "  شهرک اکباتان، فاز ۳، مجتمع تجاری کوروش، طبقه سوم"
+                      }
+                      linkBranch="/branch"
+                      linkImg={"/images/branch/breanch-ecbatan.png"}
+                    />
                   </div>
                 </Modal.Window>
               </div>

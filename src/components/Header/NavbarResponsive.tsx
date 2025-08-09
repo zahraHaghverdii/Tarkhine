@@ -175,9 +175,9 @@ export default function NavbarResponsive({
           </DropdownHeader>
 
           <Link
-            href={"/abouteUs"}
+            href={"/aboutUs"}
             className={`flex gap-x-2 w-full text-right ${
-              pathName === "/abouteUs"
+              pathName === "/aboutUs"
                 ? "text-[var(--Primary)]"
                 : "text-[var(--Gray-8)]"
             } text-sm py-3 border-b border-[var(--Gray-4)] last:border-b-none`}
@@ -185,7 +185,7 @@ export default function NavbarResponsive({
             <UserMinus
               size={18}
               color={
-                pathName === "/abouteUs" ? "var(--Primary)" : "var(--Gray-8)"
+                pathName === "/aboutUs" ? "var(--Primary)" : "var(--Gray-8)"
               }
             />
             درباره ما

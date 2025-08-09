@@ -110,12 +110,12 @@ export default function NavbarDesktop({
         </motion.div>
       </DropdownHeader>
 
-      <Link href={"/abouteUs"}>
+      <Link href={"/aboutUs"}>
         <span
           className={`
             pb-2
             ${
-              pathName === "/abouteUs"
+              pathName === "/aboutUs"
                 ? "border-b border-[var(--Primary)] text-[var(--Primary)]"
                 : "text-[var(--Gray-8)]"
             }`}

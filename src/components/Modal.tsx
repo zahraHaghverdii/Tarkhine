@@ -47,8 +47,8 @@ function Window({ children, name, titleModal, textModal }: WindowProps) {
   return (
     <>
       <Overlay onClick={close} id={name}></Overlay>
-      <div className="bg-[var(--Gray-1)] md:w-1/2 w-[90%] h-[400px] fixed left-0 right-0 top-30 bottom-50 m-auto mt-4 p-4 rounded z-40 overflow-hidden">
-        <div className="flex justify-between items-center mb-7">
+      <div className="bg-[var(--Gray-1)] lg:w-[70%] md:w-1/2 w-[90%] h-[450px] fixed left-0 right-0 top-50 bottom-50 m-auto pb-4  rounded z-40 overflow-x-hidden overflow-y-auto shadow-md">
+        <div className="flex justify-between items-center p-4 mb-7 md:bg-inherit bg-[var(--Gray-4)]">
           <div className="w-full text-center text-xl">
             <h4 className="text-[var(--Gray-9)]">{titleModal}</h4>
           </div>
@@ -61,7 +61,7 @@ function Window({ children, name, titleModal, textModal }: WindowProps) {
           <p className="w-full text-center text-[var(--Gray-9)] text-sm mb-6">
             {textModal}
           </p>
-          {children}
+          <div className="p-4 lg:py-0">{children}</div>
         </>
       </div>
     </>
